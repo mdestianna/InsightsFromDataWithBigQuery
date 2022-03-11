@@ -9,4 +9,5 @@ You're part of a public health organization which is tasked with identifying ans
 The dataset and table that will be used for this analysis will be : ‘bigquery-public-data.covid19_open_data.covid19_open_data’. This repository contains country-level datasets of daily time-series data related to COVID-19 globally. It includes data relating to demographics, economy, epidemiology, geography, health, hospitalizations, mobility, government response, and weather.
 
 Lab: https://www.cloudskillsboost.google/focuses/11988?parent=catalog
+
 Dataset: https://console.cloud.google.com/marketplace/product/bigquery-public-datasets/covid19-open-data?q=search&referrer=search&project=sacred-particle-340305
