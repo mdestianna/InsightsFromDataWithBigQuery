@@ -1,4 +1,4 @@
-# InsightsFromDataWithBigQuery
+# Insights From Data With Big Query
 
 This exercise is part of my Data Engineering and Machine Learning Fundamental training provided by Google. ‘Insights From Data With Big Query Challenge Lab’ is a non-guided lab under the quest of ‘Insights From Data With Big Query’ from Google Skills Boost. 
 
