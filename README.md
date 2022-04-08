@@ -70,7 +70,10 @@ Columns to reference:
 
 ```
 WITH fatality_ratio AS (
-SELECT SUM(cumulative_confirmed) as total_confirmed_cases, SUM(cumulative_deceased) as total_deaths, sum(cumulative_deceased)/sum(cumulative_confirmed)*100 as case_fatality_ratio
+SELECT 
+SUM(cumulative_confirmed) as total_confirmed_cases, 
+SUM(cumulative_deceased) as total_deaths, 
+SUM(cumulative_deceased)/sum(cumulative_confirmed)*100 as case_fatality_ratio
 FROM `bigquery-public-data.covid19_open_data.covid19_open_data`
 WHERE date BETWEEN "2020-06-01" AND "2020-06-30" AND country_name = 'Italy'
 )
@@ -149,7 +152,10 @@ WITH us_cases_by_date AS (
   (cases - LAG(cases) OVER(ORDER BY date))*100/LAG(cases) OVER(ORDER BY date) AS percentage_increase
 FROM us_cases_by_date
 )
-select Date, cases as Confirmed_Cases_On_Day, previous_day as Confirmed_Cases_Previous_Day, percentage_increase as Percentage_Increase_In_Cases
+SELECT Date, 
+cases as Confirmed_Cases_On_Day, 
+previous_day as Confirmed_Cases_Previous_Day, 
+percentage_increase as Percentage_Increase_In_Cases
 from us_previous_day_comparison
 where percentage_increase > 10
 ```
