@@ -12,6 +12,7 @@ Lab: https://www.cloudskillsboost.google/focuses/11988?parent=catalog
 
 Dataset: https://console.cloud.google.com/marketplace/product/bigquery-public-datasets/covid19-open-data?q=search&referrer=search&project=sacred-particle-340305
 
+
 ## QUERY 1: Total Confirmed Cases
 Build a query that will answer "What was the total count of confirmed cases on May 15, 2020 ?" The query needs to return a single row containing the sum of confirmed cases across all countries. The name of the column should be total_cases_worldwide.
 Columns to reference:
