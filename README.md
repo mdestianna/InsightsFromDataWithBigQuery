@@ -15,8 +15,8 @@ Dataset: https://console.cloud.google.com/marketplace/product/bigquery-public-da
 ## QUERY 1: Total Confirmed Cases
 Build a query that will answer "What was the total count of confirmed cases on May 15, 2020 ?" The query needs to return a single row containing the sum of confirmed cases across all countries. The name of the column should be total_cases_worldwide.
 Columns to reference:
-•	cumulative_confirmed
-•	date
+* cumulative_confirmed
+* date
 
 ```
 SELECT SUM(cumulative_confirmed) AS total_cases_worldwide
@@ -29,9 +29,9 @@ GROUP BY DATE
 Build a query for answering "How many states in the US had more than 200 deaths on May 15, 2020 ?" The query needs to list the output in the field count_of_states.
 Hint: Don't include NULL values.
 Columns to reference:
-•	country_name
-•	subregion1_name (for state information)
-•	cumulative_deceased
+* country_name
+* subregion1_name (for state information)
+* cumulative_deceased
 
 ```
 WITH us_subregion_death AS (
@@ -48,9 +48,9 @@ FROM us_subregion_death
 ## QUERY 3: Identifying Hotspots
 Build a query that will answer "List all the states in the United States of America that had more than 1500 confirmed cases on May 10, 2020?" The query needs to return the State Name and the corresponding confirmed cases arranged in descending order. Name of the fields to return state and total_confirmed_cases.
 Columns to reference:
-•	country_code
-•	subregion1_name (for state information)
-•	cumulative_confirmed
+* country_code
+* subregion1_name (for state information)
+* cumulative_confirmed
 
 ```
 SELECT subregion1_name as state, sum(cumulative_confirmed) as total_confirmed_cases 
@@ -64,9 +64,9 @@ order by total_confirmed_cases desc
 ## QUERY 4: Fatality Ratio
 Build a query that will answer "What was the case-fatality ratio in Italy for the month of june 2020?" Case-fatality ratio here is defined as (total deaths / total confirmed cases) * 100. Write a query to return the ratio for the month of june 2020 and containing the following fields in the output: total_confirmed_cases, total_deaths, case_fatality_ratio.
 Columns to reference:
-•	country_name
-•	cumulative_confirmed
-•	cumulative_deceased
+* country_name
+* cumulative_confirmed
+* cumulative_deceased
 
 ```
 WITH fatality_ratio AS (
@@ -81,8 +81,8 @@ FROM fatality_ratio
 ### QUERY 5: Identifying Specific Day
 Build a query that will answer: "On what day did the total number of deaths cross 14000 in Italy?" The query should return the date in the format yyyy-mm-dd.
 Columns to reference:
-•	country_name
-•	cumulative_deceased
+* country_name
+* cumulative_deceased
 
 ```
 SELECT date
@@ -157,9 +157,9 @@ where percentage_increase > 10
 ## QUERY 8: Recovery Rate
 Build a query to list the recovery rates of countries arranged in descending order (limit to 5 ) upto the date May 10, 2020. Restrict the query to only those countries having more than 50K confirmed cases. The query needs to return the following fields: country, recovered_cases, confirmed_cases, recovery_rate.
 Columns to reference:
-•	country_name
-•	cumulative_confirmed
-•	cumulative_recovered
+* country_name
+* cumulative_confirmed
+* cumulative_recovered
 
 ```
 WITH covid_cases AS
@@ -193,9 +193,9 @@ LIMIT 10
 The following query is trying to calculate the CDGR on May 10, 2020 (Cumulative Daily Growth Rate) for France since the day the first case was reported. The first case was reported on Jan 24, 2020. The CDGR is calculated as:
 ((last_day_cases/first_day_cases)^1/days_diff)-1)
 Where :
-•	last_day_cases is the number of confirmed cases on May 10, 2020
-•	first_day_cases is the number of confirmed cases on Jan 24, 2020
-•	days_diff is the number of days between Jan 24 - May 10, 2020
+* last_day_cases is the number of confirmed cases on May 10, 2020
+* first_day_cases is the number of confirmed cases on Jan 24, 2020
+* days_diff is the number of days between Jan 24 - May 10, 2020
 The query isn’t executing properly. Can you fix the error to make the query execute successfully?
 
 ```
@@ -229,9 +229,9 @@ from summary
 
 ## QUERY 10 : DATA STUDIO REPORT
 Create a Google Data Studio report that plots the following for the United States:
-•	Number of Confirmed Cases
-•	Number of Deaths
-•	Date range : 2020-03-23 to 2020-04-28
+* Number of Confirmed Cases
+* Number of Deaths
+* Date range : 2020-03-23 to 2020-04-28
 
 ```
 SELECT 
